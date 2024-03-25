@@ -12,7 +12,7 @@ Library    BuiltIn
 *** Variables ***
 
 # ${MyHostname}    desktopj93k2ev
-${MyHostname}    demo5757
+${MyHostname}    demo6733
 ${MyRepositoryName}    TMUPLOADERV497TC4165
 # You must create the folder "MyFolderWorkspace" manually in the computer of Jenkins master, in case you test the script with the computer of Jenkins master
 ${MyFolderWorkspace}    C:/000/jenkins/workspace
@@ -593,6 +593,9 @@ Test18
     Wait Until Element Is Visible    id=recipientsListField    timeout=15s
     Click Element    id=recipientsListField
     Sleep    1s
+    Set Focus To Element    id=recipientsListField
+    Press Keys    id=recipientsListField    ARROW_UP+ARROW_UP+ARROW_UP+ARROW_UP
+    Press Keys    None    SHIFT+ARROW_DOWN+ARROW_DOWN
     Wait Until Element Is Visible    id=uploadButton    timeout=15s
     # Later you can test and check if the items have been selected correctly with the keyword (Get Element Attribute xpath=//div[@id='recipientsListField']/select)
     Take My Screenshot
